@@ -604,6 +604,46 @@
       border-color: var(--white); color: var(--white);
       background: rgba(255,255,255,0.05);
     }
+    .project-secondary-card {
+      margin-top: 28px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+    }
+    .project-secondary-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin-bottom: 12px;
+    }
+    .project-secondary-desc {
+      color: var(--gray);
+      font-size: 0.92rem;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+    .howto-wrap {
+      width: 100%;
+      max-width: 920px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: rgba(255,255,255,0.02);
+      padding: 12px 14px;
+    }
+    .howto-wrap summary {
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--gray2);
+      letter-spacing: 0.06em;
+    }
+    .howto-list {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--gray);
+      font-size: 0.82rem;
+      line-height: 1.7;
+    }
 
     /* Chat mockup */
     .card-right {
@@ -1016,6 +1056,7 @@
       .exp-card { grid-template-columns: 64px 1fr; gap: 16px; padding: 24px 20px; }
       .company-logo-wrap { width: 64px; height: 64px; }
       .card-inner { padding: 28px 24px; }
+      .project-secondary-card { padding: 22px; }
     }
     @media (max-width: 480px) {
       .skills-grid { grid-template-columns: 1fr 1fr; }
@@ -1487,6 +1528,41 @@
         </div><!-- /card-layout -->
       </div><!-- /card-inner -->
     </div><!-- /project-hero-card -->
+
+    <article class="project-secondary-card reveal" aria-labelledby="prestige-notebook-title">
+      <div class="project-type-tag">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        Desktop Productivity App | Personal Project
+      </div>
+      <h3 class="project-secondary-title" id="prestige-notebook-title">Prestige Notebook</h3>
+      <p class="project-secondary-desc">
+        A lightweight, offline-first study notepad for Windows with rich text formatting, image paste, checklists, code blocks, and a built-in Pomodoro timer — all your Windows 11 Notepad features, plus more built for students.
+      </p>
+      <div class="tech-label">TECH STACK</div>
+      <div class="tech-badges" aria-label="Prestige Notebook tech stack">
+        <span class="tech-badge">Electron</span>
+        <span class="tech-badge">JavaScript</span>
+        <span class="tech-badge">HTML/CSS</span>
+        <span class="tech-badge">Quill.js</span>
+        <span class="tech-badge">electron-builder</span>
+      </div>
+      <div class="project-cta-wrap">
+        <a href="https://github.com/Bhadauria9z56/prestige-notebook" target="_blank" rel="noopener noreferrer" class="btn-github">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          View Source Code
+        </a>
+        <a href="https://github.com/Bhadauria9z56/prestige-notebook/releases/latest" target="_blank" rel="noopener noreferrer" class="btn-github">
+          Download for Windows
+        </a>
+        <details class="howto-wrap">
+          <summary>How to use</summary>
+          <ul class="howto-list">
+            <li><strong>Option 1 (Recommended):</strong> Download the installer from the Releases page above, run the .exe, and follow the setup wizard. All your notes stay stored locally on your device — no account or internet required.</li>
+            <li><strong>Option 2 (For developers):</strong> Clone the repository, run <code>npm install</code>, then <code>npm start</code> to run it from source.</li>
+          </ul>
+        </details>
+      </div>
+    </article>
 
   </div>
 </section>
